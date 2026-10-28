@@ -21,6 +21,16 @@ def line(start, end):
     down()
     goto(end.x, end.y)
 
+def draw_guide():
+    up()
+    x_left = -(window_width() / 2) + 10
+    y_top = (window_height() / 2) - 20
+
+    goto(x_left, y_top)
+    write("COLORES: [K]Negro [W]Blanco [G]Verde [B]Azul [R]Rojo", align='left', font=('Arial', 8, 'bold'))
+
+    goto(x_left, y_top - 15)
+    write("FIGURAS: [l]Línea [s]Cuadro [c]Círculo [e]Rectángulo [t]Triángulo", align='left', font=('Arial', 8, 'normal'))
 
 def square(start, end):
     """Draw square from start to end."""
@@ -89,6 +99,7 @@ def store(key, value):
 
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
+draw_guide()
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
