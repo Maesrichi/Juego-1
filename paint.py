@@ -21,6 +21,12 @@ def line(start, end):
     down()
     goto(end.x, end.y)
 
+def draw_guide():
+    "Draw a line whit colors and keys"
+    up()
+    goto(-190, 170)
+    color('black')
+    write("Colores: [K] Negro | [R] Rojo | [G] Verde | [B] Azul | [Y] Amarillo", font=('Arial', 9, 'bold'))
 
 def square(start, end):
     """Draw square from start to end."""
