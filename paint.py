@@ -43,8 +43,10 @@ def circle(start, end):
 
 def rectangle(start, end):
     """Draw rectangle from start to end."""
-    pass  # TODO
-
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
 
 def triangle(start, end):
     """Draw triangle from start to end."""
