@@ -62,6 +62,12 @@ def triangle(start, end):
     down()
     begin_fill()
 
+    goto(end.x, start.y)
+    goto(end.x, end.y)
+    goto(start.x, start.y)
+
+    end_fill()
+
 
 def tap(x, y):
     """Store starting point or draw shape."""
