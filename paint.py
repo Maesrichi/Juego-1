@@ -30,7 +30,7 @@ def draw_guide():
     write("COLORES: [K]Negro [W]Blanco [G]Verde [B]Azul [R]Rojo", align='left', font=('Arial', 8, 'bold'))
 
     goto(x_left, y_top - 15)
-    write("FIGURAS: [l]Línea [s]Cuadro [c]Círculo [e]Rectángulo [t]Triángulo", align='left', font=('Arial', 8, 'normal'))
+    write("FIGURAS: [l]Línea [s]Cuadro [c]Círculo [r]Rectángulo [t]Triángulo", align='left', font=('Arial', 8, 'normal'))
 
 def square(start, end):
     """Draw square from start to end."""
