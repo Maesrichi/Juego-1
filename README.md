@@ -1,39 +1,31 @@
-# Juego 1
 
-Sebastián Romero Camacho
+# Juego 1 - Paint
 
 ## Descripción del repositorio
 
-En este repositorio se encuentra el archivo `paint.py`, que contiene el código del videojuego Paint, así como el archivo `README.md`, donde 
-explicamos las modificaciones realizadas.
+Este repositorio contiene el archivo `paint.py`, que corresponde al videojuego Paint desarrollado en Python, y el archivo `README.md`, 
+donde se describen las modificaciones realizadas.
 
-Originalmente, el juego permitía dibujar líneas y cuadrados. Durante esta actividad modificamos el código para agregar nuevas figuras, como 
-rectángulos y triángulos.
+El juego permite dibujar diferentes figuras utilizando el teclado para seleccionarlas y el mouse para determinar su posición y tamaño.
 
 ## Modificaciones realizadas
 
-### 1. Completar el rectángulo
+### 1. Guía de colores y figuras
 
-Para dibujar el rectángulo, primero agregamos las instrucciones `up()`, `goto()`, `down()` y `begin_fill()`, que permiten levantar el 
-lápiz, posicionarlo en el punto inicial, bajarlo y comenzar a definir la figura que se va a rellenar.
+Se agregó una guía visual en la parte superior de la ventana que muestra las teclas disponibles para seleccionar colores y figuras. 
+Esta guía se adapta al tamaño de la ventana, facilitando que el usuario identifique los controles sin tener que memorizarlos.
 
-Después agregamos cuatro instrucciones `goto()` que utilizan las coordenadas iniciales y finales para formar los cuatro lados 
-del rectángulo. Cada instrucción mueve el lápiz hacia una esquina diferente hasta regresar al punto inicial y cerrar la 
-figura. Finalmente, utilizamos `end_fill()` para rellenar el rectángulo.
+### 2. Círculo
 
-### 2. Completar el triángulo
+Se completó la función que permite dibujar círculos de diferentes tamaños. El usuario puede seleccionar esta figura 
+presionando la tecla `c` y marcando dos puntos con el mouse, los cuales se utilizan para determinar las dimensiones del círculo.
 
-Para dibujar el triángulo utilizamos las mismas cuatro instrucciones iniciales que en el rectángulo, pero en este caso solo necesitamos 
-formar tres lados.
+### 3. Rectángulo
 
-Primero utilizamos `goto(end.x, start.y)` para dibujar la base horizontal. Después, `goto(end.x, end.y)` para formar el lado 
-vertical y finalmente `goto(start.x, start.y)` para crear la línea diagonal que regresa al punto inicial.
+Se completó la función que permite dibujar rectángulos de diferentes tamaños. El usuario puede seleccionar esta figura 
+presionando la tecla `r` y marcando dos puntos con el mouse, los cuales determinan las dimensiones del rectángulo.
 
-De esta manera conseguimos formar un triángulo rectángulo y utilizamos `end_fill()` para rellenar.
+### 4. Triángulo
 
-
-Santiago Vazquez Torres
-
-Para el primero juego hice dos tareas, puse una guia visual para que el jugador pudiera ver las teclas que cambiaban de color y de figuras, lo
-modifique para que no salieran afuera del cuadro y se el cuadro cambia este cambia con el. La parte que dibujaba el circulo estaba vacia, 
-entonces agregué codigo para que midiera el radio de inicio y fin y dibujara un circulo.
+Se agregó la funcionalidad para dibujar triángulos rectángulos. Al presionar la tecla `t` y seleccionar dos puntos con el mouse, el 
+programa utiliza sus posiciones para formar los tres lados de la figura.
